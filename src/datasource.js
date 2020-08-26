@@ -388,7 +388,7 @@ function (angular, _, dateMath, moment) {
             }
             datapoints.push([result,parseInt(datapointTime)])
           });
-          datas.push({"target": outputMetricName.replace(pattern, metricName),
+          datas.push({"target": metricName,
             "datapoints": datapoints,
             "hide": target.hide});
         }
