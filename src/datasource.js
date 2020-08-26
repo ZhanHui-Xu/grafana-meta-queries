@@ -347,6 +347,12 @@ function (angular, _, dateMath, moment) {
     }
 
     function arithmeticForDruidTopN(target, targetsByRefId, outputMetricName, results){
+      var expression = target.expression;
+      var queryLetters = Object.keys(targetsByRefId);
+
+      var functionArgs = queryLetters.join(', ');
+      var functionBody = 'return ('+expression+');';
+
         var metricNames = new Set();
         var resultsHash= {};
         for(var i=0;i<results.length;i++){
