@@ -50,6 +50,10 @@ export class MetaQueriesQueryCtrl extends QueryCtrl {
         this.target.queryType = this.defaultQueryType;
       }
 
+    if (!this.target.underlyQueryType) {
+      this.target.underlyQueryType = this.defaultUnderlyQueryType;
+    }      
+
     this.queryTypes = _.keys(this.queryTypeValidators);
 
     this.errors = this.validateTarget();
