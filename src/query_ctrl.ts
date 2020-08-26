@@ -33,8 +33,11 @@ export class MetaQueriesQueryCtrl extends QueryCtrl {
       "MovingAverage": this.validateMovingAverageQuery.bind(this),
       "Arithmetic": this.validateArithmeticQuery.bind(this),
     };
+    underlyQueryTypes = ["", "ES-groupBy", "Druid-topN", "Druid-groupBy"];
+
 
     defaultQueryType = "TimeShift";
+    defaultUnderlyQueryType = "";
 
     defaultPeriods = 7;
 
